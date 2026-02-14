@@ -1,0 +1,78 @@
+VERSION 6
+BEGIN SCHEMATIC
+    BEGIN ATTR DeviceFamilyName "virtex2p"
+        DELETE all:0
+        EDITNAME all:0
+        EDITTRAIT all:0
+    END ATTR
+    BEGIN NETLIST
+        BEGIN BLOCKDEF reg64
+            TIMESTAMP 2026 2 13 21 5 20
+            LINE N 64 32 0 32 
+            LINE N 64 -160 0 -160 
+            LINE N 64 -96 0 -96 
+            RECTANGLE N 0 -44 64 -20 
+            LINE N 64 -32 0 -32 
+            RECTANGLE N 400 -172 464 -148 
+            LINE N 400 -160 464 -160 
+            RECTANGLE N 64 -192 400 64 
+        END BLOCKDEF
+        BEGIN BLOCKDEF decode2b
+            TIMESTAMP 2026 2 13 20 38 32
+            RECTANGLE N 64 -256 320 0 
+            RECTANGLE N 0 -236 64 -212 
+            LINE N 64 -224 0 -224 
+            LINE N 320 -224 384 -224 
+            LINE N 320 -160 384 -160 
+            LINE N 320 -96 384 -96 
+            LINE N 320 -32 384 -32 
+        END BLOCKDEF
+        BEGIN BLOCK XLXI_1 reg64
+            PIN clk
+            PIN reset
+            PIN data_in(63:0)
+            PIN data_out(63:0)
+            PIN en
+        END BLOCK
+        BEGIN BLOCK XLXI_2 reg64
+            PIN clk
+            PIN reset
+            PIN data_in(63:0)
+            PIN data_out(63:0)
+            PIN en
+        END BLOCK
+        BEGIN BLOCK XLXI_3 reg64
+            PIN clk
+            PIN reset
+            PIN data_in(63:0)
+            PIN data_out(63:0)
+            PIN en
+        END BLOCK
+        BEGIN BLOCK XLXI_4 reg64
+            PIN clk
+            PIN reset
+            PIN data_in(63:0)
+            PIN data_out(63:0)
+            PIN en
+        END BLOCK
+        BEGIN BLOCK XLXI_6 decode2b
+            PIN addr(1:0)
+            PIN out00
+            PIN out01
+            PIN out10
+            PIN out11
+        END BLOCK
+    END NETLIST
+    BEGIN SHEET 1 3520 2720
+        BEGIN INSTANCE XLXI_1 1680 592 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_2 1680 976 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_3 1680 1344 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_4 1680 1744 R0
+        END INSTANCE
+        BEGIN INSTANCE XLXI_6 560 976 R0
+        END INSTANCE
+    END SHEET
+END SCHEMATIC
