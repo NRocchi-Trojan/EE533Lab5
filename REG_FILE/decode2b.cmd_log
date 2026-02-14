@@ -1,0 +1,4 @@
+sch2vhdl -intstyle ise -family virtex2p -flat -suppress -w "C:/Documents and Settings/student/test_project/lab3/ee533_lab4_pt2/decode2b.sch" decode2b.vhf
+sch2vhdl -intstyle ise -family virtex2p -flat -suppress -w "C:/Documents and Settings/student/test_project/lab3/ee533_lab4_pt2/decode2b.sch" decode2b.vhf
+sch2vhdl -intstyle ise -family virtex2p -flat -suppress -w "C:/Documents and Settings/student/test_project/lab3/ee533_lab4_pt2/decode2b.sch" decode2b.vhf
+sch2verilog -intstyle ise -family virtex2p   -w "C:/Documents and Settings/student/test_project/lab3/ee533_lab4_pt2/decode2b.sch" decode2b.vf

@@ -1,0 +1,4 @@
+select figure at 2362 1602 21 -wires -sn=1
+select all in -39 327 2357 1597 -wires -enclosed -noattrwin -sn=1
+select figure at 270 836 21 -wires -sn=1
+select figure at 265 831 21 -wires -sn=1

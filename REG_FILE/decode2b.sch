@@ -1,0 +1,151 @@
+VERSION 6
+BEGIN SCHEMATIC
+    BEGIN ATTR DeviceFamilyName "virtex2p"
+        DELETE all:0
+        EDITNAME all:0
+        EDITTRAIT all:0
+    END ATTR
+    BEGIN NETLIST
+        SIGNAL addr(1:0)
+        SIGNAL addr(0)
+        SIGNAL addr(1)
+        SIGNAL XLXN_31
+        SIGNAL XLXN_34
+        SIGNAL out00
+        SIGNAL out01
+        SIGNAL out10
+        SIGNAL out11
+        PORT Input addr(1:0)
+        PORT Output out00
+        PORT Output out01
+        PORT Output out10
+        PORT Output out11
+        BEGIN BLOCKDEF inv
+            TIMESTAMP 2000 1 1 10 10 10
+            LINE N 0 -32 64 -32 
+            LINE N 224 -32 160 -32 
+            LINE N 64 -64 128 -32 
+            LINE N 128 -32 64 0 
+            LINE N 64 0 64 -64 
+            CIRCLE N 128 -48 160 -16 
+        END BLOCKDEF
+        BEGIN BLOCKDEF and2
+            TIMESTAMP 2000 1 1 10 10 10
+            LINE N 0 -64 64 -64 
+            LINE N 0 -128 64 -128 
+            LINE N 256 -96 192 -96 
+            ARC N 96 -144 192 -48 144 -48 144 -144 
+            LINE N 144 -48 64 -48 
+            LINE N 64 -144 144 -144 
+            LINE N 64 -48 64 -144 
+        END BLOCKDEF
+        BEGIN BLOCK XLXI_2 inv
+            PIN I addr(0)
+            PIN O XLXN_31
+        END BLOCK
+        BEGIN BLOCK XLXI_7 and2
+            PIN I0 addr(1)
+            PIN I1 addr(0)
+            PIN O out11
+        END BLOCK
+        BEGIN BLOCK XLXI_6 and2
+            PIN I0 XLXN_34
+            PIN I1 addr(0)
+            PIN O out10
+        END BLOCK
+        BEGIN BLOCK XLXI_5 and2
+            PIN I0 addr(1)
+            PIN I1 XLXN_31
+            PIN O out01
+        END BLOCK
+        BEGIN BLOCK XLXI_4 and2
+            PIN I0 XLXN_34
+            PIN I1 XLXN_31
+            PIN O out00
+        END BLOCK
+        BEGIN BLOCK XLXI_3 inv
+            PIN I addr(1)
+            PIN O XLXN_34
+        END BLOCK
+    END NETLIST
+    BEGIN SHEET 1 3520 2720
+        BEGIN BRANCH addr(1:0)
+            WIRE 384 560 624 560
+            WIRE 624 560 640 560
+            WIRE 640 560 848 560
+            WIRE 848 560 848 576
+            WIRE 848 576 848 704
+            WIRE 848 704 848 768
+            BEGIN DISPLAY 632 560 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        IOMARKER 384 560 addr(1:0) R180 28
+        BUSTAP 848 576 944 576
+        INSTANCE XLXI_7 1728 1504 R0
+        INSTANCE XLXI_6 1728 1328 R0
+        INSTANCE XLXI_5 1728 1152 R0
+        INSTANCE XLXI_4 1728 976 R0
+        INSTANCE XLXI_2 1088 544 R0
+        BUSTAP 848 704 944 704
+        INSTANCE XLXI_3 1072 672 R0
+        BEGIN BRANCH out00
+            WIRE 1984 880 2016 880
+        END BRANCH
+        IOMARKER 2016 880 out00 R0 28
+        BEGIN BRANCH out01
+            WIRE 1984 1056 2016 1056
+        END BRANCH
+        IOMARKER 2016 1056 out01 R0 28
+        BEGIN BRANCH out10
+            WIRE 1984 1232 2016 1232
+        END BRANCH
+        IOMARKER 2016 1232 out10 R0 28
+        BEGIN BRANCH out11
+            WIRE 1984 1408 2016 1408
+        END BRANCH
+        IOMARKER 2016 1408 out11 R0 28
+        BEGIN BRANCH XLXN_34
+            WIRE 1296 640 1520 640
+            WIRE 1520 640 1520 912
+            WIRE 1520 912 1728 912
+            WIRE 1520 912 1520 1264
+            WIRE 1520 1264 1728 1264
+        END BRANCH
+        BEGIN BRANCH addr(1)
+            WIRE 944 704 960 704
+            WIRE 960 704 1008 704
+            WIRE 1008 704 1600 704
+            WIRE 1600 704 1600 1088
+            WIRE 1600 1088 1728 1088
+            WIRE 1600 1088 1600 1440
+            WIRE 1600 1440 1728 1440
+            WIRE 1008 640 1072 640
+            WIRE 1008 640 1008 704
+            BEGIN DISPLAY 960 704 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH addr(0)
+            WIRE 944 576 960 576
+            WIRE 960 576 1008 576
+            WIRE 1008 576 1440 576
+            WIRE 1440 576 1440 1200
+            WIRE 1440 1200 1728 1200
+            WIRE 1440 1200 1440 1376
+            WIRE 1440 1376 1728 1376
+            WIRE 1008 512 1088 512
+            WIRE 1008 512 1008 576
+            BEGIN DISPLAY 960 576 ATTR Name
+                ALIGNMENT SOFT-BCENTER
+            END DISPLAY
+        END BRANCH
+        BEGIN BRANCH XLXN_31
+            WIRE 1312 512 1360 512
+            WIRE 1360 512 1360 848
+            WIRE 1360 848 1728 848
+            WIRE 1360 848 1360 1024
+            WIRE 1360 1024 1728 1024
+        END BRANCH
+    END SHEET
+END SCHEMATIC
