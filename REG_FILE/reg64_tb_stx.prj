@@ -1,0 +1,3 @@
+verilog isim_temp "reg64.v"
+verilog isim_temp "reg64_tb.v"
+verilog isim_temp "C:/Xilinx/10.1/ISE/verilog/src/glbl.v"
