@@ -17,7 +17,7 @@ BEGIN SCHEMATIC
         SIGNAL InstID(15:0)
         SIGNAL InstID(6:5)
         SIGNAL InstID(14)
-        SIGNAL InstID(10:9)
+        SIGNAL InstID(9:8)
         SIGNAL InstID(15)
         SIGNAL XLXN_14(63:0)
         SIGNAL XLXN_43
@@ -36,6 +36,7 @@ BEGIN SCHEMATIC
         SIGNAL XLXN_56
         SIGNAL XLXN_57
         SIGNAL InstAddr(7:0)
+        SIGNAL InstID(12:11)
         PORT Input clk
         PORT Input wea
         BEGIN BLOCKDEF IFISReg
@@ -201,8 +202,8 @@ BEGIN SCHEMATIC
             PIN wena XLXN_44
             PIN waddr(1:0) XLXN_46(1:0)
             PIN clk clk
-            PIN r1addr(1:0) InstID(10:9)
-            PIN r0addr(1:0) InstID(15)
+            PIN r1addr(1:0) InstID(9:8)
+            PIN r0addr(1:0) InstID(12:11)
             PIN wdata(63:0) XLXN_14(63:0)
             PIN r0data(63:0) XLXN_16(63:0)
             PIN r1data(63:0) XLXN_15(63:0)
@@ -291,15 +292,9 @@ BEGIN SCHEMATIC
                 ALIGNMENT SOFT-RIGHT
             END DISPLAY
         END BRANCH
-        BEGIN BRANCH InstID(10:9)
+        BEGIN BRANCH InstID(9:8)
             WIRE 1520 2864 1632 2864
             BEGIN DISPLAY 1520 2864 ATTR Name
-                ALIGNMENT SOFT-RIGHT
-            END DISPLAY
-        END BRANCH
-        BEGIN BRANCH InstID(15)
-            WIRE 1520 2928 1632 2928
-            BEGIN DISPLAY 1520 2928 ATTR Name
                 ALIGNMENT SOFT-RIGHT
             END DISPLAY
         END BRANCH
@@ -419,6 +414,12 @@ BEGIN SCHEMATIC
             WIRE 4112 2832 4144 2832
             WIRE 4112 2832 4112 3200
             WIRE 4944 3072 4944 3200
+        END BRANCH
+        BEGIN BRANCH InstID(12:11)
+            WIRE 1520 2928 1632 2928
+            BEGIN DISPLAY 1520 2928 ATTR Name
+                ALIGNMENT SOFT-RIGHT
+            END DISPLAY
         END BRANCH
     END SHEET
 END SCHEMATIC
