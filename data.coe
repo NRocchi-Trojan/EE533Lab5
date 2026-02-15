@@ -1,0 +1,7 @@
+memory_initialization_radix=10;
+memory_initialization_vector=
+4,   // Address 0: The value to be loaded into Reg2 and Reg3
+0,   // Address 1
+0,   // Address 2
+0,   // Address 3
+100; // Address 4: The value that will be overwritten by our Store instruction
