@@ -842,7 +842,6 @@ proc restore { { project_dir "" } } {
       "IntStageReg.sch" 
       "MEMWBStageReg.sch" 
       "PipelinedDatapath.sch" 
-      "Z:/SharedXM/EE533Lab5/REG_FILE/reg64_tb.v" 
       "decode2b.sch" 
       "m4_64b.v" 
       "reg2.v" 

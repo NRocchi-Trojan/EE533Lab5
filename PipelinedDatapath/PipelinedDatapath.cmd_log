@@ -1,2 +1,6 @@
 sch2verilog -intstyle ise -family virtex2p   -w "C:/labs/PipelinedDatapath/PipelinedDatapath.sch" PipelinedDatapath.vf
 sch2verilog -intstyle ise -family virtex2p   -w "C:/labs/PipelinedDatapath/PipelinedDatapath.sch" PipelinedDatapath.vf
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/shared/SharedProjects/EE533Lab5-main/PipelinedDatapath/PipelinedDatapath.sch" PipelinedDatapath.vf
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/shared/SharedProjects/EE533Lab5-main/PipelinedDatapath/PipelinedDatapath.sch" PipelinedDatapath.vf
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/shared/SharedProjects/EE533Lab5-main/PipelinedDatapath/PipelinedDatapath.sch" PipelinedDatapath.vf
+sch2verilog -intstyle ise -family virtex2p   -w "Z:/shared/SharedProjects/EE533Lab5-main/PipelinedDatapath/PipelinedDatapath.sch" PipelinedDatapath.vf

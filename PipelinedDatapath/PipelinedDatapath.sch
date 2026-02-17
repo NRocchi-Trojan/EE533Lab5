@@ -7,9 +7,9 @@ BEGIN SCHEMATIC
     END ATTR
     BEGIN NETLIST
         SIGNAL clk
-        SIGNAL XLXN_3(2:0)
-        SIGNAL XLXN_4(2:0)
-        SIGNAL XLXN_5(2:0)
+        SIGNAL XLXN_3(1:0)
+        SIGNAL XLXN_4(63:0)
+        SIGNAL XLXN_5(63:0)
         SIGNAL XLXN_6
         SIGNAL XLXN_7
         SIGNAL XLXN_15(63:0)
@@ -26,15 +26,12 @@ BEGIN SCHEMATIC
         SIGNAL XLXN_46(1:0)
         SIGNAL XLXN_47(63:0)
         SIGNAL XLXN_48
-        SIGNAL XLXN_49
         SIGNAL XLXN_50(63:0)
         SIGNAL InstIF(31:0)
         SIGNAL InstIF(15:0)
-        SIGNAL XLXN_53
         SIGNAL wea
         SIGNAL XLXN_55
         SIGNAL XLXN_56
-        SIGNAL XLXN_57
         SIGNAL InstAddr(7:0)
         SIGNAL InstID(12:11)
         PORT Input clk
@@ -172,17 +169,17 @@ BEGIN SCHEMATIC
             PIN REG1I(63:0) XLXN_16(63:0)
             PIN WMEO XLXN_7
             PIN WREO XLXN_6
-            PIN WREG1O(1:0) XLXN_3(2:0)
-            PIN REG2O(63:0) XLXN_4(2:0)
-            PIN REG1O(63:0) XLXN_5(2:0)
+            PIN WREG1O(1:0) XLXN_3(1:0)
+            PIN REG2O(63:0) XLXN_4(63:0)
+            PIN REG1O(63:0) XLXN_5(63:0)
         END BLOCK
         BEGIN BLOCK XLXI_19 IntStageReg
             PIN clk clk
             PIN WMEI XLXN_7
             PIN WREI XLXN_6
-            PIN WREG1I(1:0) XLXN_3(2:0)
-            PIN REG2I(63:0) XLXN_4(2:0)
-            PIN REG1I(63:0) XLXN_5(2:0)
+            PIN WREG1I(1:0) XLXN_3(1:0)
+            PIN REG2I(63:0) XLXN_4(63:0)
+            PIN REG1I(63:0) XLXN_5(63:0)
             PIN WMEO XLXN_48
             PIN WREO XLXN_43
             PIN WREG1O(1:0) XLXN_45(1:0)
@@ -224,6 +221,12 @@ BEGIN SCHEMATIC
             PIN wea wea
             PIN addra(8:0) InstAddr(7:0)
         END BLOCK
+        BEGIN BLOCK XLXI_24 gnd
+            PIN G XLXN_55
+        END BLOCK
+        BEGIN BLOCK XLXI_25 vcc
+            PIN P XLXN_56
+        END BLOCK
         BEGIN BLOCK XLXI_23 cb8ce
             PIN C clk
             PIN CE XLXN_56
@@ -232,24 +235,18 @@ BEGIN SCHEMATIC
             PIN Q(7:0) InstAddr(7:0)
             PIN TC
         END BLOCK
-        BEGIN BLOCK XLXI_24 gnd
-            PIN G XLXN_55
-        END BLOCK
-        BEGIN BLOCK XLXI_25 vcc
-            PIN P XLXN_56
-        END BLOCK
     END NETLIST
     BEGIN SHEET 1 5440 3520
         BEGIN INSTANCE XLXI_1 816 2064 R0
         END INSTANCE
         IOMARKER 480 3200 clk R180 28
-        BEGIN BRANCH XLXN_3(2:0)
+        BEGIN BRANCH XLXN_3(1:0)
             WIRE 2896 2976 3392 2976
         END BRANCH
-        BEGIN BRANCH XLXN_4(2:0)
+        BEGIN BRANCH XLXN_4(63:0)
             WIRE 2896 2736 3392 2736
         END BRANCH
-        BEGIN BRANCH XLXN_5(2:0)
+        BEGIN BRANCH XLXN_5(63:0)
             WIRE 2896 2544 3392 2544
         END BRANCH
         BEGIN BRANCH XLXN_6
@@ -368,7 +365,6 @@ BEGIN SCHEMATIC
             WIRE 144 2304 192 2304
         END BRANCH
         IOMARKER 144 2304 wea R180 28
-        INSTANCE XLXI_23 256 2032 R0
         BEGIN BRANCH XLXN_55
             WIRE 224 2000 256 2000
         END BRANCH
@@ -421,5 +417,6 @@ BEGIN SCHEMATIC
                 ALIGNMENT SOFT-RIGHT
             END DISPLAY
         END BRANCH
+        INSTANCE XLXI_23 256 2032 R0
     END SHEET
 END SCHEMATIC
