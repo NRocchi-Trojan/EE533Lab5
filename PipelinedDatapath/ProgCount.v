@@ -1,0 +1,48 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1
+//  \   \         Application : sch2verilog
+//  /   /         Filename : ProgCount.vf
+// /___/   /\     Timestamp : 02/17/2026 16:26:26
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\10.1\ISE\bin\nt\unwrapped\sch2verilog.exe -intstyle ise -family virtex2p -w Z:/shared/SharedProjects/EE533Lab5-main/PipelinedDatapath/ProgCount.sch ProgCount.vf
+//Design Name: ProgCount
+//Device: virtex2p
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module ProgCount(clk, 
+                 oper, 
+                 ProgCounter);
+
+    input clk;
+    input [2:0] oper;
+   output [63:0] ProgCounter;
+   
+   wire [63:0] XLXN_1;
+   wire XLXN_9;
+   wire [63:0] ProgCounter_DUMMY;
+   
+   assign ProgCounter[63:0] = ProgCounter_DUMMY[63:0];
+   ALU64Bit XLXI_1 (.a(XLXN_1[63:0]), 
+                    .amask(), 
+                    .b(), 
+                    .cin(XLXN_9), 
+                    .op(oper[2:0]), 
+                    .cout(), 
+                    .res(ProgCounter_DUMMY[63:0]));
+   reg64 XLXI_2 (.clk(clk), 
+                 .data_in(ProgCounter_DUMMY[63:0]), 
+                 .en(XLXN_9), 
+                 .data_out(XLXN_1[63:0]));
+   VCC XLXI_4 (.P(XLXN_9));
+endmodule

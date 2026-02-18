@@ -1,0 +1,234 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2008 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 10.1
+//  \   \         Application : sch2verilog
+//  /   /         Filename : ALU64Bit.vf
+// /___/   /\     Timestamp : 02/17/2026 16:25:05
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: C:\Xilinx\10.1\ISE\bin\nt\unwrapped\sch2verilog.exe -intstyle ise -family virtex2p -w Z:/shared/SharedProjects/EE533Lab5-main/PipelinedDatapath/ALU64Bit.sch ALU64Bit.vf
+//Design Name: ALU64Bit
+//Device: virtex2p
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module AND8_MXILINX_ALU64Bit(I0, 
+                             I1, 
+                             I2, 
+                             I3, 
+                             I4, 
+                             I5, 
+                             I6, 
+                             I7, 
+                             O);
+
+    input I0;
+    input I1;
+    input I2;
+    input I3;
+    input I4;
+    input I5;
+    input I6;
+    input I7;
+   output O;
+   
+   wire dummy;
+   wire S0;
+   wire S1;
+   wire O_DUMMY;
+   
+   assign O = O_DUMMY;
+   FMAP I_36_29 (.I1(I0), 
+                 .I2(I1), 
+                 .I3(I2), 
+                 .I4(I3), 
+                 .O(S0));
+   // synthesis attribute RLOC of I_36_29 is "X0Y0"
+   AND4 I_36_110 (.I0(I0), 
+                  .I1(I1), 
+                  .I2(I2), 
+                  .I3(I3), 
+                  .O(S0));
+   AND4 I_36_127 (.I0(I4), 
+                  .I1(I5), 
+                  .I2(I6), 
+                  .I3(I7), 
+                  .O(S1));
+   FMAP I_36_138 (.I1(I4), 
+                  .I2(I5), 
+                  .I3(I6), 
+                  .I4(I7), 
+                  .O(S1));
+   // synthesis attribute RLOC of I_36_138 is "X0Y0"
+   AND2 I_36_142 (.I0(S0), 
+                  .I1(S1), 
+                  .O(O_DUMMY));
+   FMAP I_36_152 (.I1(S0), 
+                  .I2(S1), 
+                  .I3(dummy), 
+                  .I4(dummy), 
+                  .O(O_DUMMY));
+   // synthesis attribute RLOC of I_36_152 is "X0Y1"
+endmodule
+`timescale 1ns / 1ps
+
+module M2_1_MXILINX_ALU64Bit(D0, 
+                             D1, 
+                             S0, 
+                             O);
+
+    input D0;
+    input D1;
+    input S0;
+   output O;
+   
+   wire M0;
+   wire M1;
+   
+   AND2B1 I_36_7 (.I0(S0), 
+                  .I1(D0), 
+                  .O(M0));
+   OR2 I_36_8 (.I0(M1), 
+               .I1(M0), 
+               .O(O));
+   AND2 I_36_9 (.I0(D1), 
+                .I1(S0), 
+                .O(M1));
+endmodule
+`timescale 1ns / 1ps
+
+module ALU64Bit(a, 
+                amask, 
+                b, 
+                cin, 
+                op, 
+                cout, 
+                res);
+
+    input [63:0] a;
+    input [7:0] amask;
+    input [63:0] b;
+    input cin;
+    input [2:0] op;
+   output cout;
+   output [63:0] res;
+   
+   wire Car0;
+   wire Car1;
+   wire Car2;
+   wire Car3;
+   wire Car4;
+   wire Car5;
+   wire Car6;
+   wire Car7;
+   wire XLXN_178;
+   wire XLXN_179;
+   wire XLXN_180;
+   wire XLXN_181;
+   wire XLXN_182;
+   wire XLXN_183;
+   wire XLXN_184;
+   wire XLXN_185;
+   wire XLXN_236;
+   wire XLXN_262;
+   
+   ALU8Bit XLXI_1 (.a(a[7:0]), 
+                   .b(b[7:0]), 
+                   .cin(cin), 
+                   .op(op[2:0]), 
+                   .cout(Car0), 
+                   .res(res[7:0]));
+   ALU8Bit XLXI_2 (.a(a[15:8]), 
+                   .b(b[15:8]), 
+                   .cin(Car0), 
+                   .op(op[2:0]), 
+                   .cout(Car1), 
+                   .res(res[15:8]));
+   ALU8Bit XLXI_3 (.a(a[23:16]), 
+                   .b(b[23:16]), 
+                   .cin(Car1), 
+                   .op(op[2:0]), 
+                   .cout(Car2), 
+                   .res(res[23:16]));
+   ALU8Bit XLXI_4 (.a(a[31:24]), 
+                   .b(b[31:24]), 
+                   .cin(Car2), 
+                   .op(op[2:0]), 
+                   .cout(Car3), 
+                   .res(res[31:24]));
+   ALU8Bit XLXI_5 (.a(a[39:32]), 
+                   .b(b[39:32]), 
+                   .cin(Car3), 
+                   .op(op[2:0]), 
+                   .cout(Car4), 
+                   .res(res[39:32]));
+   ALU8Bit XLXI_6 (.a(a[47:40]), 
+                   .b(b[47:40]), 
+                   .cin(Car4), 
+                   .op(op[2:0]), 
+                   .cout(Car5), 
+                   .res(res[47:40]));
+   ALU8Bit XLXI_7 (.a(a[55:48]), 
+                   .b(b[55:48]), 
+                   .cin(Car5), 
+                   .op(op[2:0]), 
+                   .cout(Car6), 
+                   .res(res[55:48]));
+   ALU8Bit XLXI_8 (.a(a[63:56]), 
+                   .b(b[63:56]), 
+                   .cin(Car6), 
+                   .op(op[2:0]), 
+                   .cout(Car7), 
+                   .res(res[63:56]));
+   M2_1_MXILINX_ALU64Bit XLXI_14 (.D0(Car7), 
+                                  .D1(XLXN_236), 
+                                  .S0(XLXN_262), 
+                                  .O(cout));
+   // synthesis attribute HU_SET of XLXI_14 is "XLXI_14_0"
+   AND3B1 XLXI_16 (.I0(op[1]), 
+                   .I1(op[2]), 
+                   .I2(op[0]), 
+                   .O(XLXN_262));
+   AND8_MXILINX_ALU64Bit XLXI_34 (.I0(XLXN_182), 
+                                  .I1(XLXN_181), 
+                                  .I2(XLXN_180), 
+                                  .I3(XLXN_179), 
+                                  .I4(XLXN_178), 
+                                  .I5(XLXN_183), 
+                                  .I6(XLXN_184), 
+                                  .I7(XLXN_185), 
+                                  .O(XLXN_236));
+   // synthesis attribute HU_SET of XLXI_34 is "XLXI_34_1"
+   OR2B1 XLXI_35 (.I0(amask[6]), 
+                  .I1(Car6), 
+                  .O(XLXN_184));
+   OR2B1 XLXI_36 (.I0(amask[7]), 
+                  .I1(Car7), 
+                  .O(XLXN_185));
+   OR2B1 XLXI_39 (.I0(amask[5]), 
+                  .I1(Car5), 
+                  .O(XLXN_183));
+   OR2B1 XLXI_40 (.I0(amask[4]), 
+                  .I1(Car4), 
+                  .O(XLXN_178));
+   OR2B1 XLXI_41 (.I0(amask[3]), 
+                  .I1(Car3), 
+                  .O(XLXN_179));
+   OR2B1 XLXI_42 (.I0(amask[2]), 
+                  .I1(Car2), 
+                  .O(XLXN_180));
+   OR2B1 XLXI_43 (.I0(amask[1]), 
+                  .I1(Car1), 
+                  .O(XLXN_181));
+   OR2B1 XLXI_44 (.I0(amask[0]), 
+                  .I1(Car0), 
+                  .O(XLXN_182));
+endmodule
