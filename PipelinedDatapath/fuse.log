@@ -1,39 +1,17 @@
 Determining compilation order of HDL files
-Analyzing Verilog file ALU1Bit.vf
-Analyzing Verilog file ALU8Bit.vf
 Analyzing Verilog file reg64.v
 Analyzing Verilog file reg2.v
 Analyzing Verilog file m4_64b.v
 Analyzing Verilog file decode2b.vf
-Analyzing Verilog file ALU64Bit.vf
 Analyzing Verilog file reg_file.vf
-Analyzing Verilog file ProgCount.vf
 Analyzing Verilog file MEMWBStageReg.vf
 Analyzing Verilog file IntStageReg.vf
-Analyzing Verilog file IMemInterface.v
+Analyzing Verilog file InstructionMem.v
 Analyzing Verilog file IFISReg.vf
-Analyzing Verilog file DMemInterface.v
+Analyzing Verilog file DataMemory.v
 Analyzing Verilog file PipelinedDatapath.vf
 Analyzing Verilog file PipelineDatpath.tfw
 Analyzing Verilog file C:/Xilinx/10.1/ISE/verilog/src/glbl.v
-Saving Verilog parse-tree work.M2_1_MXILINX_ALU1Bit into
-z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@m2_1_@m@x@i
-@l@i@n@x_@a@l@u1@bit.sdb
-Saving Verilog parse-tree work.M2_1E_MXILINX_ALU1Bit into
-z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@m2_1@e_@m@x
-@i@l@i@n@x_@a@l@u1@bit.sdb
-Saving Verilog parse-tree work.M8_1E_MXILINX_ALU1Bit into
-z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@m8_1@e_@m@x
-@i@l@i@n@x_@a@l@u1@bit.sdb
-Saving Verilog parse-tree work.ALU1Bit into
-z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@a@l@u1@bit.
-sdb
-Saving Verilog parse-tree work.M2_1_MXILINX_ALU8Bit into
-z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@m2_1_@m@x@i
-@l@i@n@x_@a@l@u8@bit.sdb
-Saving Verilog parse-tree work.ALU8Bit into
-z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@a@l@u8@bit.
-sdb
 Saving Verilog parse-tree work.reg64 into
 z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/reg64.sdb
 Saving Verilog parse-tree work.reg2 into
@@ -42,38 +20,32 @@ Saving Verilog parse-tree work.m4_64b into
 z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/m4_64b.sdb
 Saving Verilog parse-tree work.decode2b into
 z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/decode2b.sdb
-Saving Verilog parse-tree work.AND8_MXILINX_ALU64Bit into
-z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@a@n@d8_@m@x
-@i@l@i@n@x_@a@l@u64@bit.sdb
-Saving Verilog parse-tree work.M2_1_MXILINX_ALU64Bit into
-z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@m2_1_@m@x@i
-@l@i@n@x_@a@l@u64@bit.sdb
-Saving Verilog parse-tree work.ALU64Bit into
-z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@a@l@u64@bit
-.sdb
 Saving Verilog parse-tree work.reg_file into
 z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/reg_file.sdb
-Saving Verilog parse-tree work.ProgCount into
-z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@prog@count.
-sdb
 Saving Verilog parse-tree work.MEMWBStageReg into
 z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@m@e@m@w@b@s
 tage@reg.sdb
 Saving Verilog parse-tree work.IntStageReg into
 z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@int@stage@r
 eg.sdb
-Saving Verilog parse-tree work.IMemInterface into
-z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@i@mem@inter
-face.sdb
+Saving Verilog parse-tree work.InstructionMem into
+z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@instruction
+@mem.sdb
 Saving Verilog parse-tree work.FD16CE_MXILINX_IFISReg into
 z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@f@d16@c@e_@
 m@x@i@l@i@n@x_@i@f@i@s@reg.sdb
 Saving Verilog parse-tree work.IFISReg into
 z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@i@f@i@s@reg
 .sdb
-Saving Verilog parse-tree work.DMemInterface into
-z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@d@mem@inter
-face.sdb
+Saving Verilog parse-tree work.DataMemory into
+z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@data@memory
+.sdb
+Saving Verilog parse-tree work.FTCE_MXILINX_PipelinedDatapath into
+z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@f@t@c@e_@m@
+x@i@l@i@n@x_@pipelined@datapath.sdb
+Saving Verilog parse-tree work.CB8CE_MXILINX_PipelinedDatapath into
+z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@c@b8@c@e_@m
+@x@i@l@i@n@x_@pipelined@datapath.sdb
 Saving Verilog parse-tree work.PipelinedDatapath into
 z:/shared/sharedprojects/ee533lab5-main/pipelineddatapath/isim/work/@pipelined@d
 atapath.sdb
@@ -91,41 +63,25 @@ Restoring Verilog parse-tree unisims_ver.FD from
 c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
 Restoring Verilog parse-tree unisims_ver.VCC from
 c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
-Restoring Verilog parse-tree xilinxcorelib_ver.BLK_MEM_GEN_V2_7 from
-c:/xilinx/10.1/ise/verilog/hdp/nt/xilinxcorelib_ver/xilinxcorelib_ver.sdbl
-Restoring Verilog parse-tree xilinxcorelib_ver.BLK_MEM_GEN_V2_7_output_stage
-from c:/xilinx/10.1/ise/verilog/hdp/nt/xilinxcorelib_ver/xilinxcorelib_ver.sdbl
-Restoring Verilog parse-tree unisims_ver.OR2 from
-c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
-Restoring Verilog parse-tree unisims_ver.XOR3 from
-c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
-Restoring Verilog parse-tree unisims_ver.XOR2 from
-c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
-Restoring Verilog parse-tree unisims_ver.AND2B1 from
-c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
-Restoring Verilog parse-tree unisims_ver.AND3 from
-c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
-Restoring Verilog parse-tree unisims_ver.AND3B1 from
-c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
-Restoring Verilog parse-tree unisims_ver.MUXF5_L from
-c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
-Restoring Verilog parse-tree unisims_ver.MUXF6 from
-c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
-Restoring Verilog parse-tree unisims_ver.XNOR2 from
-c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
-Restoring Verilog parse-tree unisims_ver.AND4 from
-c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
-Restoring Verilog parse-tree unisims_ver.FMAP from
-c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
-Restoring Verilog parse-tree unisims_ver.OR2B1 from
-c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
 Restoring Verilog parse-tree unisims_ver.FDCE from
 c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
 Restoring Verilog parse-tree unisims_ver.GND from
 c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree xilinxcorelib_ver.BLKMEMSP_V6_2 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/xilinxcorelib_ver/xilinxcorelib_ver.sdbl
+Restoring Verilog parse-tree xilinxcorelib_ver.BLKMEMDP_V6_3 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/xilinxcorelib_ver/xilinxcorelib_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.XOR2 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.AND5 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.AND3 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
+Restoring Verilog parse-tree unisims_ver.AND4 from
+c:/xilinx/10.1/ise/verilog/hdp/nt/unisims_ver/unisims_ver.sdbl
 Completed static elaboration
 Fuse Memory Usage: 55176 Kb
-Fuse CPU Usage: 2155 ms
+Fuse CPU Usage: 859 ms
 Compiling module glbl
 Compiling module reg64
 Compiling module INV
@@ -143,8 +99,70 @@ Compiling module reg2
 Compiling module IntStageReg
 Compiling module IntStageReg_2
 Compiling module MEMWBStageReg
-Compiling module BLK_MEM_GEN_V2_7_output_stage(C_...
-Compiling module BLK_MEM_GEN_V2_7(C_ADDRA_WIDTH=8...
-ERROR:Simulator:615 -
-   "K:/IP0_K.14/env/Databases/ip/export/rtf/verilog/src/XilinxCoreLib/BLK_MEM_GE
-   N_V2_7.v" Line 497. Argument given for file Identifier is not correct
+Compiling module FDCE(INIT=1'b0)_0
+Compiling module FDCE(INIT=1'b0)_1
+Compiling module FDCE(INIT=1'b0)_2
+Compiling module FDCE(INIT=1'b0)_3
+Compiling module FDCE(INIT=1'b0)_4
+Compiling module FDCE(INIT=1'b0)_5
+Compiling module FDCE(INIT=1'b0)_6
+Compiling module FDCE(INIT=1'b0)_7
+Compiling module FDCE(INIT=1'b0)_8
+Compiling module FDCE(INIT=1'b0)_9
+Compiling module FDCE(INIT=1'b0)_10
+Compiling module FDCE(INIT=1'b0)_11
+Compiling module FDCE(INIT=1'b0)_12
+Compiling module FDCE(INIT=1'b0)_13
+Compiling module FDCE(INIT=1'b0)_14
+Compiling module FDCE(INIT=1'b0)_15
+Compiling module FDCE(INIT=1'b0)_16
+Compiling module FDCE(INIT=1'b0)_17
+Compiling module FDCE(INIT=1'b0)_18
+Compiling module FDCE(INIT=1'b0)_19
+Compiling module FDCE(INIT=1'b0)_20
+Compiling module FDCE(INIT=1'b0)_21
+Compiling module FDCE(INIT=1'b0)_22
+Compiling module FDCE(INIT=1'b0)_23
+Compiling module FDCE(INIT=1'b0)_24
+Compiling module FDCE(INIT=1'b0)_25
+Compiling module FDCE(INIT=1'b0)_26
+Compiling module FDCE(INIT=1'b0)_27
+Compiling module FDCE(INIT=1'b0)_28
+Compiling module FDCE(INIT=1'b0)_29
+Compiling module FDCE(INIT=1'b0)_30
+Compiling module FDCE(INIT=1'b0)_31
+Compiling module FDCE(INIT=1'b0)_32
+Compiling module FDCE(INIT=1'b0)_33
+Compiling module FDCE(INIT=1'b0)_34
+Compiling module FDCE(INIT=1'b0)_35
+Compiling module FDCE(INIT=1'b0)_36
+Compiling module FDCE(INIT=1'b0)_37
+Compiling module FDCE(INIT=1'b0)_38
+Compiling module FDCE(INIT=1'b0)_39
+Compiling module FD16CE_MXILINX_IFISReg
+Compiling module GND
+Compiling module FD16CE_MXILINX_IFISReg_2
+Compiling module IFISReg
+Compiling module BLKMEMSP_V6_2(c_addr_width=8,c_d...
+Compiling module InstructionMem
+Compiling module BLKMEMDP_V6_3(c_addra_width=8,c_...
+Compiling module DataMemory
+Compiling module XOR2
+Compiling module FTCE_MXILINX_PipelinedDatapath
+Compiling module FTCE_MXILINX_PipelinedDatapath_2
+Compiling module FTCE_MXILINX_PipelinedDatapath_3
+Compiling module FTCE_MXILINX_PipelinedDatapath_4
+Compiling module FTCE_MXILINX_PipelinedDatapath_5
+Compiling module FTCE_MXILINX_PipelinedDatapath_6
+Compiling module FTCE_MXILINX_PipelinedDatapath_7
+Compiling module FTCE_MXILINX_PipelinedDatapath_8
+Compiling module AND5
+Compiling module AND3
+Compiling module AND4
+Compiling module CB8CE_MXILINX_PipelinedDatapath
+Compiling module PipelinedDatapath
+Compiling module PipelineDatpath
+Compiled 80 Verilog Units
+Built simulation executable PipelineDatpath_isim_beh.exe
+Fuse Memory Usage: 59788 Kb
+Fuse CPU Usage: 3234 ms

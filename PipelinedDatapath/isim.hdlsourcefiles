@@ -1,5 +1,12 @@
 C:/Xilinx/10.1/ISE/verilog/src/glbl.v
-C:/labs/PipelinedDatapath/reg2.v
-C:/labs/PipelinedDatapath/reg64.v
+//vmware-host/Shared Folders/shared/SharedProjects/EE533Lab5-main/PipelinedDatapath/PipelinedDatapath.vf
+K:/IP0_K.14/env/Databases/ip/export/rtf/verilog/src/XilinxCoreLib/BLKMEMDP_V6_3.v
+K:/IP0_K.14/env/Databases/ip/export/rtf/verilog/src/XilinxCoreLib/BLKMEMSP_V6_2.v
+N:/K.31/rtf/verilog/src/unisims/GND.v
+N:/K.31/rtf/verilog/src/unisims/FDCE.v
+//vmware-host/Shared Folders/shared/SharedProjects/EE533Lab5-main/PipelinedDatapath/reg2.v
 N:/K.31/rtf/verilog/src/unisims/VCC.v
 N:/K.31/rtf/verilog/src/unisims/FD.v
+//vmware-host/Shared Folders/shared/SharedProjects/EE533Lab5-main/PipelinedDatapath/m4_64b.v
+//vmware-host/Shared Folders/shared/SharedProjects/EE533Lab5-main/PipelinedDatapath/reg64.v
+//vmware-host/Shared Folders/shared/SharedProjects/EE533Lab5-main/PipelinedDatapath/PipelineDatpath.tfw

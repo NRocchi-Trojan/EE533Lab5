@@ -1,0 +1,11 @@
+# Output products list for <DataMemory>
+DataMemory.asy
+DataMemory.ngc
+DataMemory.sym
+DataMemory.v
+DataMemory.veo
+DataMemory.vhd
+DataMemory.vho
+DataMemory.xco
+DataMemory_flist.txt
+DataMemory_xmdf.tcl
